@@ -4,48 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Letter</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
-
-        .navbar a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        .letter-container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-
-        .letter-title {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .letter-content {
-            text-align: justify;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css"> <!-- Reference the global styles -->
 </head>
 <body>
     <div class="navbar">
         <a href="index.html">Home</a>
+        <button id="previousLetterBtn" onclick="goToPreviousLetter()">Previous Letter</button>
+        <button id="nextLetterBtn" onclick="goToNextLetter()">Next Letter</button>
     </div>
 
     <div class="letter-container">
@@ -57,8 +22,9 @@
     <script>
         window.onload = function() {
             const params = new URLSearchParams(window.location.search);
-            const letterId = params.get('id');
+            const letterId = parseInt(params.get('id'));
             fetchLetter(letterId);
+            updateButtonVisibility(letterId);
         };
 
         function fetchLetter(id) {
@@ -70,6 +36,32 @@
                     document.getElementById('letterContent').innerHTML = lines.slice(2).join('<br>'); // Content starts from the third line
                 })
                 .catch(error => console.error('Error fetching letter:', error));
+        }
+
+        function goToPreviousLetter() {
+            const params = new URLSearchParams(window.location.search);
+            let currentId = parseInt(params.get('id'));
+            if (currentId > 1) {
+                currentId--;
+                window.location.href = `letter.html?id=${currentId}`;
+            }
+        }
+
+        function goToNextLetter() {
+            const params = new URLSearchParams(window.location.search);
+            let currentId = parseInt(params.get('id'));
+            // You should adjust the upper limit according to the number of letters you have
+            if (currentId < maxLetterId) {
+                currentId++;
+                window.location.href = `letter.html?id=${currentId}`;
+            }
+        }
+
+        function updateButtonVisibility(currentId) {
+            const previousLetterBtn = document.getElementById('previousLetterBtn');
+            const nextLetterBtn = document.getElementById('nextLetterBtn');
+            previousLetterBtn.style.display = currentId > 1 ? 'inline-block' : 'none';
+            nextLetterBtn.style.display = currentId < maxLetterId ? 'inline-block' : 'none';
         }
     </script>
 </body>

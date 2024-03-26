@@ -1,3 +1,4 @@
 [
-    {"id": 1, "date": "2024-03-25", "title": "Letter 1"}
+    {"id": 1, "date": "2024-03-25", "title": "hello world"},
+    {"id": 2, "date": "2024-03-26", "title": "first letter"}
 ]
