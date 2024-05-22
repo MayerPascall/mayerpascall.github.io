@@ -20,6 +20,8 @@
 
     <script src="scripts.js"></script>
     <script>
+        const maxLetterId = 3
+
         window.onload = function() {
             const params = new URLSearchParams(window.location.search);
             const letterId = parseInt(params.get('id'));
@@ -28,7 +30,7 @@
         };
 
         function fetchLetter(id) {
-            fetch(`letters/letter${id}.txt`) // Assuming your letters are named letter1.txt, letter2.txt, etc.
+            fetch(`letters/letter${id}.txt`) // Assuming letters are named letter1.txt, letter2.txt, etc.
                 .then(response => response.text())
                 .then(data => {
                     const lines = data.split('\n');
