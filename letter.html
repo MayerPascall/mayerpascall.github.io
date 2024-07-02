@@ -20,13 +20,7 @@
 
     <script src="scripts.js"></script>
     <script>
-        fetch('letters.json')
-            .then(response => response.json())
-            .then(data => {
-            const maxLetterId = data.length;
-            })
-            .catch(error => console.error('Error fetching letter data:', error));
-
+        const maxLetterId = 5;
 
         window.onload = function() {
             const params = new URLSearchParams(window.location.search);
@@ -40,8 +34,7 @@
                 .then(response => response.text())
                 .then(data => {
                     const lines = data.split('\n');
-                    document.getElementById('letterTitle').textContent = lines.slice(1); // Assuming title is in the second line
-                    console.log(lines.slice(1));
+                    document.getElementById('letterTitle').textContent = lines.slice()[0]; // Assuming title is in the first line
                     document.getElementById('letterContent').innerHTML = lines.slice(2).join('<br>'); // Content starts from the third line
                 })
                 .catch(error => console.error('Error fetching letter:', error));
