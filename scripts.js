@@ -28,19 +28,32 @@ function fetchLetters() {
         .catch(error => console.error('Error fetching letters:', error));
 }
 
-function sendGoogleForm(letterTitle, link) {
-    console.log('Submitting form for letter:', letterTitle);
+function sendGoogleForm(letterTitle, linkHref) {
+    // Gather additional information
+    const timestamp = new Date().toISOString();
+    const userAgent = navigator.userAgent;
+    const referrer = document.referrer;
+    const screenSize = `${window.screen.width}x${window.screen.height}`;
+    const windowSize = `${window.innerWidth}x${window.innerHeight}`;
+
     // Construct the Google Form submission URL
-    const googleFormUrl = `https://docs.google.com/forms/d/e/1FAIpQLSc6SS3fpcG6xCliB5BdbBXo7YqpCrTEoL-jQ1pKZmiXNPJkZw/formResponse?entry.373416654=${encodeURIComponent(letterTitle)}`;
-    
+    const googleFormUrl = `https://docs.google.com/forms/d/e/1FAIpQLSc6SS3fpcG6xCliB5BdbBXo7YqpCrTEoL-jQ1pKZmiXNPJkZw/formResponse?` +
+        `entry.373416654=${encodeURIComponent(letterTitle)}` +  // Letter title
+        `&entry.123456789=${encodeURIComponent(timestamp)}` +  // Timestamp
+        `&entry.987654321=${encodeURIComponent(userAgent)}` +  // User agent
+        `&entry.654321987=${encodeURIComponent(referrer)}` +   // Referrer URL
+        `&entry.321987654=${encodeURIComponent(screenSize)}` + // Screen size
+        `&entry.654123789=${encodeURIComponent(windowSize)}`;  // Window size
+
     const iframe = document.getElementById('hidden_iframe');
     
     // Listen for iframe load event to verify form submission
     iframe.onload = () => {
         console.log('Form submission complete for letter:', letterTitle);
-        window.location.href = link.href; // Proceed to the letter page after submission
+        window.location.href = linkHref;  // Proceed to the letter page after submission
     };
 
     // Submit the form by loading the URL into the hidden iframe
     iframe.src = googleFormUrl;
 }
+
