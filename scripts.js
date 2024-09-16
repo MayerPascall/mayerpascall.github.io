@@ -23,25 +23,29 @@ function sendEmail(letter) {
     .catch(error => console.error('Error:', error));
 }
 
+// Pre-filled link: https://docs.google.com/forms/d/e/1FAIpQLSc6SS3fpcG6xCliB5BdbBXo7YqpCrTEoL-jQ1pKZmiXNPJkZw/viewform?usp=pp_url&entry.373416654=Now
+
 function sendGoogleForm(letter) {
     console.log('Submitting Google Form...');
     const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSc6SS3fpcG6xCliB5BdbBXo7YqpCrTEoL-jQ1pKZmiXNPJkZw/formResponse';
-    const formData = {
-        'entry.373416654': `Letter clicked: ${letter.date} - ${letter.title}`
-    };
+    const formData = new URLSearchParams();
+    formData.append('entry.373416654', `Letter clicked: ${letter.date} - ${letter.title}`);
 
-    $.ajax({
-        url: formUrl,
+    fetch(formUrl, {
         method: 'POST',
-        dataType: 'json',
-        data: formData,
-        success: function(response) {
-            console.log('Form submitted successfully');
-        },
-        error: function(error) {
-            console.error('Error submitting form', error);
+        body: formData,
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
         }
-    });
+    })
+    .then(response => {
+        if (response.ok) {
+            console.log('Form submitted successfully');
+        } else {
+            console.error('Error submitting form');
+        }
+    })
+    .catch(error => console.error('Error:', error));
 }
 
 function fetchLetters() {
