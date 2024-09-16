@@ -62,7 +62,6 @@ function fetchLetters() {
                 link.addEventListener('click', (event) => {
                     event.preventDefault(); // Prevent default link behavior
                     sendGoogleForm(letter); // Call function to open Google Form
-                    sendEmail(letter); // Call function to send email
                     window.location.href = link.href; // Navigate to the link after opening Google Form
                 });
                 listItem.appendChild(link);
