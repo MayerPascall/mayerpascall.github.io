@@ -11,7 +11,7 @@ i lost the desire to do a lot of things, netflix, watching sports, youtube, game
 - ~~strikethrough~~
 - `code text 123 function()` 
 - [link](https://github.com/MayerPascall/mayerpascall.github.io)
-- ![image](https://www.iconarchive.com/download/i103429/paomedia/small-n-flat/heart.ico)
+- images: ![heart image](https://www.iconarchive.com/download/i103429/paomedia/small-n-flat/heart.ico)
 1. numbered list
 
 these are coming from the todo letter i wrote a second ago
