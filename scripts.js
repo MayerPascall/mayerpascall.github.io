@@ -36,14 +36,21 @@ function sendGoogleForm(letterTitle, linkHref) {
     const screenSize = `${window.screen.width}x${window.screen.height}`;
     const windowSize = `${window.innerWidth}x${window.innerHeight}`;
 
+    // entry.373416654=letterTitle
+    // entry.579192505=timestamp
+    // entry.132697913=userAgent
+    // entry.1986864652=referrer
+    // entry.1022950244=screenSize
+    // entry.1631154431=windowSize
+
     // Construct the Google Form submission URL
     const googleFormUrl = `https://docs.google.com/forms/d/e/1FAIpQLSc6SS3fpcG6xCliB5BdbBXo7YqpCrTEoL-jQ1pKZmiXNPJkZw/formResponse?` +
         `entry.373416654=${encodeURIComponent(letterTitle)}` +  // Letter title
-        `&entry.123456789=${encodeURIComponent(timestamp)}` +  // Timestamp
-        `&entry.987654321=${encodeURIComponent(userAgent)}` +  // User agent
-        `&entry.654321987=${encodeURIComponent(referrer)}` +   // Referrer URL
-        `&entry.321987654=${encodeURIComponent(screenSize)}` + // Screen size
-        `&entry.654123789=${encodeURIComponent(windowSize)}`;  // Window size
+        `&entry.579192505=${encodeURIComponent(timestamp)}` +  // Timestamp
+        `&entry.132697913=${encodeURIComponent(userAgent)}` +  // User agent
+        `&entry.1986864652=${encodeURIComponent(referrer)}` +   // Referrer URL
+        `&entry.1022950244=${encodeURIComponent(screenSize)}` + // Screen size
+        `&entry.1631154431=${encodeURIComponent(windowSize)}`;  // Window size
 
     const iframe = document.getElementById('hidden_iframe');
     
