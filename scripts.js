@@ -18,10 +18,7 @@ function fetchLetters() {
                 // Handle link click
                 link.addEventListener('click', (event) => {
                     event.preventDefault(); // Prevent default link behavior
-                    sendGoogleForm(letter.title); // Submit form with letter title
-                    setTimeout(() => {
-                        window.location.href = link.href; // Proceed to letter page
-                    }, 100000); // Adjust delay as necessary
+                    sendGoogleForm(letter.title, link); // Submit form with letter title
                 });
                 
                 listItem.appendChild(link);
@@ -31,7 +28,7 @@ function fetchLetters() {
         .catch(error => console.error('Error fetching letters:', error));
 }
 
-function sendGoogleForm(letterTitle) {
+function sendGoogleForm(letterTitle, link) {
     console.log('Submitting form for letter:', letterTitle);
     // Construct the Google Form submission URL
     const googleFormUrl = `https://docs.google.com/forms/d/e/1FAIpQLSc6SS3fpcG6xCliB5BdbBXo7YqpCrTEoL-jQ1pKZmiXNPJkZw/formResponse?entry.373416654=${encodeURIComponent(letterTitle)}`;
@@ -41,7 +38,7 @@ function sendGoogleForm(letterTitle) {
     // Listen for iframe load event to verify form submission
     iframe.onload = () => {
         console.log('Form submission complete for letter:', letterTitle);
-        window.location.href = linkHref; // Proceed to the letter page after submission
+        window.location.href = link.href; // Proceed to the letter page after submission
     };
 
     // Submit the form by loading the URL into the hidden iframe
