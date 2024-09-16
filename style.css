@@ -63,3 +63,8 @@ body {
 .letter-date {
     text-align: center;
 }
+
+/* Hyperlink styles */
+a {
+    text-decoration: none; /* Ensure hyperlinks are not underlined */
+}

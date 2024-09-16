@@ -6,18 +6,13 @@ i lost the desire to do a lot of things, netflix, watching sports, youtube, game
 - # heading
 - ## heading but smaller
 - ### heading but even smaller
-- **bold** text
-- *italic* text
-- ::highlight::
+- **bold text** 
+- *italic text* 
 - ~~strikethrough~~
-- `code` text
+- `code text 123 function()` 
 - [link](https://github.com/MayerPascall/mayerpascall.github.io)
-- ![image](https://www.google.com)
-- > blockquote
-- - list
-- 1. numbered list
-- [] todo list
-- and more!
+- ![image](https://www.iconarchive.com/download/i103429/paomedia/small-n-flat/heart.ico)
+1. numbered list
 
 these are coming from the todo letter i wrote a second ago
 
