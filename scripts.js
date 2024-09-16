@@ -5,13 +5,13 @@ window.onload = function() {
 function sendEmail(letter) {
     fetch('https://formspree.io/f/xldrkoyd', {
         method: 'POST',
-        headers: {
-            'Accept': 'application/json'
-        },
         body: JSON.stringify({
             email: 'enmes.mescall@gmail.com', // Replace with your email
             message: `Letter clicked: ${letter.date} - ${letter.title}`
-        })
+        }),
+        headers: {
+            'Accept': 'application/json'
+        }
     })
     .then(response => {
         if (response.ok) {
@@ -24,9 +24,24 @@ function sendEmail(letter) {
 }
 
 function sendGoogleForm(letter) {
-    const baseUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSc6SS3fpcG6xCliB5BdbBXo7YqpCrTEoL-jQ1pKZmiXNPJkZw/viewform?usp=pp_url&entry.373416654=';
-    const preFilledUrl = `${baseUrl}${encodeURIComponent(`Letter clicked: ${letter.date} - ${letter.title}`)}`;
-    window.open(preFilledUrl, '_blank');
+    console.log('Submitting Google Form...');
+    const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSc6SS3fpcG6xCliB5BdbBXo7YqpCrTEoL-jQ1pKZmiXNPJkZw/formResponse';
+    const formData = {
+        'entry.373416654': `Letter clicked: ${letter.date} - ${letter.title}`
+    };
+
+    $.ajax({
+        url: formUrl,
+        method: 'POST',
+        dataType: 'json',
+        data: formData,
+        success: function(response) {
+            console.log('Form submitted successfully');
+        },
+        error: function(error) {
+            console.error('Error submitting form', error);
+        }
+    });
 }
 
 function fetchLetters() {
