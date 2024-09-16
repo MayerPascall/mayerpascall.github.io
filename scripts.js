@@ -3,10 +3,10 @@ window.onload = function() {
 };
 
 function sendEmail(letter) {
-    fetch('https://formspree.io/enmes.mescall@gmail.com', {
+    fetch('https://formspree.io/f/xldrkoyd', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Accept': 'application/json'
         },
         body: JSON.stringify({
             email: 'enmes.mescall@gmail.com', // Replace with your email
