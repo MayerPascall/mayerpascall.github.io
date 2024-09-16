@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Letter</title>
         <link rel="stylesheet" href="style.css"> <!-- Reference the global styles -->
-        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> <!-- Include marked library -->
     </head>
 <body>
     <div class="navbar">
@@ -19,6 +18,7 @@
         <div class="letter-content" id="letterContent"></div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> <!-- Include marked library -->
     <script src="scripts.js"></script>
     <script>
         const maxLetterId = 7;
@@ -37,7 +37,7 @@
                     const lines = data.split('\n');
                     document.getElementById('letterTitle').textContent = lines[0]; // Assuming title is in the first line
                     const markdownContent = lines.slice(2).join('\n'); // Content starts from the third line
-                    document.getElementById('letterContent').innerHTML = marked(markdownContent); // Convert Markdown to HTML
+                    document.getElementById('letterContent').innerHTML = marked.parse(markdownContent); // Convert Markdown to HTML
                 })
                 .catch(error => console.error('Error fetching letter:', error));
         }
