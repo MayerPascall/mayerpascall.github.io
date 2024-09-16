@@ -32,6 +32,7 @@ function fetchLetters() {
 }
 
 function sendGoogleForm(letterTitle) {
+    console.log('Submitting form for letter:', letterTitle);
     // Construct the Google Form submission URL
     const googleFormUrl = `https://docs.google.com/forms/d/e/1FAIpQLSc6SS3fpcG6xCliB5BdbBXo7YqpCrTEoL-jQ1pKZmiXNPJkZw/formResponse?entry.373416654=${encodeURIComponent(letterTitle)}`;
     
