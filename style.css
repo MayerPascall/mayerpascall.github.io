@@ -60,7 +60,8 @@ body {
 }
 
 .letter-item a:hover {
-    background-color: #1d1d1d;
+    background-color: #3a3a37;
+    transform: scale(1.05);
 }
 
 .letter-date {
