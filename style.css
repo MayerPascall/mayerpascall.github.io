@@ -1,13 +1,14 @@
 /* Global styles */
 body {
     font-family: Arial, sans-serif;
+    background-color: #1d1c1d;
     margin: 0;
     padding: 0;
 }
 
 /* Navbar styles */
 .navbar {
-    background-color: #333;
+    background-color: #4b4b4b;
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -21,6 +22,7 @@ body {
 
 /* Letter container styles */
 .letter-container {
+    color: antiquewhite;
     max-width: 800px;
     margin: 20px auto;
     padding: 0 20px;
@@ -48,16 +50,17 @@ body {
 }
 
 .letter-item a {
+    background-color: #1d1c1d;
     display: block;
     text-decoration: none;
-    color: #333;
+    color: antiquewhite;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid antiquewhite;
     border-radius: 5px;
 }
 
 .letter-item a:hover {
-    background-color: #f4f4f4;
+    background-color: #1d1d1d;
 }
 
 .letter-date {
