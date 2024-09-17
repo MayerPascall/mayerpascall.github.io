@@ -15,9 +15,13 @@ body {
 }
 
 .navbar a {
-    color: #fff;
+    color: antiquewhite;
     text-decoration: none;
     margin: 0 10px;
+}
+
+.navbar a:visited {
+    color: antiquewhite;
 }
 
 /* Letter container styles */
@@ -64,6 +68,10 @@ body {
     transform: scale(1.05);
 }
 
+.letter-item a:visited {
+    color: antiquewhite;
+}
+
 .letter-date {
     text-align: center;
 }
@@ -71,11 +79,11 @@ body {
 /* Hyperlink styles */
 a {
     text-decoration: none; /* Ensure hyperlinks are not underlined */
-    color: rgb(87, 87, 247); /* Bright blue for unclicked links */
+    color: rgb(104, 104, 207); /* Bright blue for unclicked links */
 }
 
 a:visited {
-    color: #8d48ce; /* Bright purple for visited links */
+    color: #8050ad; /* Bright purple for visited links */
 }
 
 a:hover {
