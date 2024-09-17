@@ -70,4 +70,13 @@ body {
 /* Hyperlink styles */
 a {
     text-decoration: none; /* Ensure hyperlinks are not underlined */
+    color: rgb(87, 87, 247); /* Bright blue for unclicked links */
+}
+
+a:visited {
+    color: #8d48ce; /* Bright purple for visited links */
+}
+
+a:hover {
+    color: rgb(219, 219, 105); /* Bright yellow for hovered links */
 }
