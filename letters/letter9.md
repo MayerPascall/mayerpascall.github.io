@@ -2,6 +2,7 @@ we're back
 
 “I hope you look both ways when you cross my mind”
  
+
 I had a dream about you tonight. This is way more common than you'd think. 
 
 We were sitting in the C1 bus with rachel and nic bolton going from west to east, probably to go to their house or something. We were sitting next to eachother facing the two of them and were chatting lightly, but the bus driver had the radio on  so we couldn't hear eachother across the aisle and just ended up having conversations in pairs. I can't really remember moments in dreams all too well, but I can really remember the emotion of warmth and happiness that I felt in this made-up moment that I decided to conjure in my sleep. Even though this memory likely didn't happen, it still feels like it did and it reminds me of one of the things that I love the most about you and our relationship: our great conversations with eachother. I must sound like a broken record at this point, but I'm going to chalk off my repetition as emphasis on this point: you can tell its legit because I was even dreaming about it, even if conversations in dreams are incomprehensible and impossible to remember. That doesn't really matter to me though, remembering the specifics, since I just feel good waking up and thinking of the feelings.
@@ -26,9 +27,10 @@ Visiting the white house and driving down the national mall was special. Crossin
 
 Honestly, if I really start thinking about it, little moments like when we were both facetiming while watching Jet Lag and we both fell asleep at different times are also really special. It felt so nice when I woke up and you were still on there and the episode was like 90% finished, although I know it took me forever to eventually watch it again. 
 
-Not to get all cliche or cheesy, but my point here really is that when we spend so long with eachother its hard to just pick out a moment here or there that is particularly more 'special' than the others. I've said that word so many times now that its starting to lose meaning. I am really excited to see you again (my favorite Tyler, The Creator song, inspired this whole text) and I really can't wait to start the untrackable list of special and intimate moments again. I hope today can be a really special day for you. I love you so much,
+Not to get all cliche or cheesy, but my point here really is that when we spend so long with eachother its hard to just pick out a moment here or there that is particularly more 'special' than the others. I've said that word so many times now that its starting to lose meaning. I am really excited to [see you again](https://open.spotify.com/track/7KA4W4McWYRpgf0fWsJZWB?si=113798e493a440df) (my favorite Tyler, The Creator song, inspired this whole text) and I really can't wait to start the untrackable list of special and intimate moments again. I hope today can be a really special day for you. I love you so much,
 
 Happy birthday!
+
 Enzo
 
 
