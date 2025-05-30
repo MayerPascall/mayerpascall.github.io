@@ -17,7 +17,7 @@ Sometimes I just dream about being at Duke together doing some random activity h
 
 I've also dreamt about P-checks before, dreaming about the moment when you were in the tent and told Hattie that we were going out. I was able to imagine the moment so vividly in my sleep, even though I was like far as fuck away and blacked out talking to Morgan or some shit. I have no idea if you actually told her while in the tent, but I've reconstructed that whole moment in my head while we sleep. If we're looking to answer the question of 'when did I fall in love' then I think that moment is probably way too late, since I was ready to say it to you that same night. Writing this down right now, I remember coming to this conclusion before the last time you asked me this question.
 
-You really do always ask me to tell you, when was the moment you fell in love?_ I don't know, there's so many.
+You really do always ask me to tell you, _when was the moment you fell in love?_ I don't know, there's so many.
 
 I would say that falling in love was a bit of a process, and I don't think I'm ever going to get a real moment. When we were on the couch watching modern family and I was freaking out is also probably too late.I think we have to go earlier. Probably to one of those really late nights where I snuck in and we had sex and then talked for hours before you fell asleep and I had to sneak back out. I always had some time to reflect on my thoughts while walking or cycling back home, and despite not being able to identify my feelings in the exact moment, I really did start to feel something special about you. How could I not?
 
